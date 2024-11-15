@@ -1,16 +1,13 @@
-import json
+import uvicorn
+from fastapi import FastAPI
 
-from src.my_module import get_greeting
+app = FastAPI()
 
 
-def main() -> None:
-    greeting = get_greeting("Alice")
-    data = {
-        "greeting": greeting,
-    }
-    with open("data.json", mode="w", encoding="utf-8") as f:
-        json.dump(data, f)
+@app.get("/hello")
+async def print_hello() -> str:
+    return "Hello, World!!!"
 
 
 if __name__ == "__main__":
-    main()
+    uvicorn.run("src.main:app", reload=True)

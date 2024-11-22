@@ -7,12 +7,6 @@ from src.api_routers.tasks import tasks
 
 app = FastAPI()
 
-
-@app.get("/hello")
-async def print_hello() -> str:
-    return "Hello, World!!!"
-
-
 app.include_router(auth)
 app.include_router(lists)
 app.include_router(tasks)

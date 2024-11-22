@@ -59,3 +59,8 @@ DELETE /tasks/{id}
 пользователь, список задач, задача
 
 [Схема БД](https://miro.com/welcomeonboard/WXQzS3B5ZHVEbEJUbktnT0svTHcra2dUV3NLZWdocFR2ZC9oRUFGaGJ4V2tjcnlhdnJOUmRYNVNhUzVDSHFjc1ZCSjRrOGtSdGp4Uy9hNy9CVGdSWFJTNEFra0VZWE5FOWhscEwrb3pXR3JVeFRHdHBKbGs1Vk9uenpyRGw1QzAhZQ==?share_link_id=733472881396)
+
+
+```bash
+docker run -d --name db -p 5432:5432 -e POSTGRES_PASSWORD=postgres -e POSTGRES_USER=postgres postgres
+```
